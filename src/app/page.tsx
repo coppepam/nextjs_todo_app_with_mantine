@@ -1,9 +1,17 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import { Metadata } from 'next'
+import Image from 'next/image'
+import styles from './page.module.css'
+
+export const metadata: Metadata = {
+  title: 'My Mantine app',
+  description: 'I have followed setup instructions carefully',
+}
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <main
+      className={`${styles.main} flex w-screen flex-1 flex-col justify-center items-center`}
+    >
       <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
@@ -15,7 +23,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            By{" "}
+            By{' '}
             <Image
               src="/vercel.svg"
               alt="Vercel Logo"
@@ -91,5 +99,5 @@ export default function Home() {
         </a>
       </div>
     </main>
-  );
+  )
 }
