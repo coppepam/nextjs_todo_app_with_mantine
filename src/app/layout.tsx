@@ -23,10 +23,8 @@ export default function RootLayout({
       <body>
         <QueryClientProvider>
           <MantineProvider
-            // withGlobalStyles
-            // withNormalizeCss
+            defaultColorScheme="auto"
             theme={{
-              // colorScheme: 'dark' as 'light' | 'dark',
               fontFamily: 'Verdana, sans-serif',
             }}
           >
