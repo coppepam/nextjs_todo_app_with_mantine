@@ -7,7 +7,7 @@ import { TaskForm } from '../../../components/TaskForm'
 import { TaskList } from '../../../components/TaskList'
 import { UserInfo } from '../../../components/UserInfo'
 
-export const DashBoardPage = () => {
+const DashBoardPage = () => {
   const router = useRouter()
   const queryClient = useQueryClient()
   const handleLogout = async () => {
