@@ -19,7 +19,6 @@ import Head from 'next/head'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 import * as Yup from 'yup'
-import styles from './page.module.css'
 import { AuthForm } from './types'
 
 const schema = Yup.object().shape({
@@ -69,7 +68,7 @@ export default function Home() {
         />
       </Head>
       <main
-        className={`${styles.main} flex w-screen flex-1 flex-col justify-center items-center`}
+        className={`flex w-screen flex-1 flex-col justify-center items-center`}
       >
         <ShieldCheckIcon className="w-16 h-16 text-blue-500" />
         {error && (

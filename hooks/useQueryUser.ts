@@ -20,8 +20,8 @@ export const useQueryUser = () => {
       const { data } = await axios.get<Omit<User, "hashedPassword">>(`${process.env.NEXT_PUBLIC_API_URL}/user`)
       return data
     } catch (error: any) {
-      if (error.response?.status === 401) {
-        router.push('/login')
+      if ([401, 403].includes(error.response?.status)) {
+        router.push('/')
       }
       throw error
     }
